@@ -50,7 +50,7 @@ class FACTORY {
 // Write your code below:
 
 class CAR extends FACTORY {
-    constructor(model, doors, color, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof) {
+    constructor({ model, doors, color, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof }) {
         super();
         this.model = model;
         this.doors = doors;
@@ -77,15 +77,7 @@ class CAR extends FACTORY {
 
 class SPORT extends CAR {
     constructor(model, trim, transmission, top, color, seatstrim, audio, wheelstrim) {
-        super();
-        this.model = model;
-        this.trim = trim;
-        this.transmission = transmission;
-        this.top = top;
-        this.color = color;
-        this.seatstrim = seatstrim;
-        this.audio = audio;
-        this.wheelstrim = wheelstrim;
+        super({ model, trim, transmission, top, color, seatstrim, audio, wheelstrim });
         this.moonroof = false;
         this.enginetype = 'gasoline';
         this.convertible = true;
