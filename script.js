@@ -50,7 +50,7 @@ class FACTORY {
 // Write your code below:
 
 class CAR extends FACTORY {
-    constructor({ model, doors, color, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof }) {
+    constructor(model, doors, color, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof) {
         super();
         this.model = model;
         this.doors = doors;
@@ -77,7 +77,15 @@ class CAR extends FACTORY {
 
 class SPORT extends CAR {
     constructor(model, trim, transmission, top, color, seatstrim, audio, wheelstrim) {
-        super({ model, trim, transmission, top, color, seatstrim, audio, wheelstrim });
+        super();
+        this.model = model;
+        this.trim = trim;
+        this.transmission = transmission;
+        this.top = top;
+        this.color = color;
+        this.seatstrim = seatstrim;
+        this.audio = audio;
+        this.wheelstrim = wheelstrim;
         this.moonroof = false;
         this.enginetype = 'gasoline';
         this.convertible = true;
@@ -129,13 +137,13 @@ console.log(Car);
 // It should print: "Building 35000 Red Touring Mazda3's."
 // Write your code below:
 
-Car.massBuild(35000, Car);
+console.log(Car.massBuild(35000, Car));
 
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
 
-Car.customerBuild('Yellow', Car, ['weather package', 'satellite radio', 'rear spoiler']);
+console.log(Car.customerBuild('Yellow', Car, ['weather package', 'satellite radio', 'rear spoiler']));
 
 // MIATA-RF MASS PRODUCTION
 // Create an instance  Sport.
@@ -155,13 +163,13 @@ console.log(Sport);
 // It should print: "Building 15000 Red Grand Touring Miata-RF's."
 // Write your code below:
 
-Sport.massBuild(15000, Sport);
+console.log(Sport.massBuild(15000, Sport));
 
 // Print miataRf, calling customerBuild(), building one black Miata-Rf with the following options, as an array: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control.
 // It should read: "Building one black Grand Touring Miata-RF with the following options: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control"
 // Write your code below:
 
-Sport.customerBuild('black', Sport, ['hid headlights', 'sports suspension', 'leather steering wheel', 'heated seats', 'adaptive cruise control']);
+console.log(Sport.customerBuild('black', Sport, ['hid headlights', 'sports suspension', 'leather steering wheel', 'heated seats', 'adaptive cruise control']));
 
 // TRAIL BLAZER MASS PRODUCTION
 // The Trail Blazer should inherit from truck.
@@ -181,10 +189,10 @@ console.log(trailBlazer);
 // It should print: "Building 35000 blue Sport Trail Blazer's."
 // Wrint your code below:
 
-trailBlazer.massBuild(35000, trailBlazer);
+console.log(trailBlazer.massBuild(35000, trailBlazer));
 
 // Print trailBlazer, calling customerBuild(). It should build a red Trail Blazer with the following options, as an array: seat warmers, tinted windows, fog lamps.
 // It should print: "Building one red Sport Trail Blazer with the following options: seat warmers, tinted windows, fog lamps"
 // Write your code below:
 
-trailBlazer.customerBuild('Red', trailBlazer, ['seat warmers', 'tinted windows', 'fog lamps']);
+console.log(trailBlazer.customerBuild('Red', trailBlazer, ['seat warmers', 'tinted windows', 'fog lamps']));
